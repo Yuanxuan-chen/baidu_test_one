@@ -12,9 +12,12 @@ suite = unittest.defaultTestLoader.discover(start_dir=test_dir, pattern='test*.p
 # runner.run(suite)
 
 # 生成html测试报告
+
 # html测试报告名称 + 时间戳
 now_time = time.strftime("%Y-%m-%d %H_%M_%S")
 fp = open("../test_report/" + now_time + "test_report.html", "wb")
+
+# stream: 输出目标文件, title: 报告标题, description: 备注
 runner = HTMLTestRunner(stream=fp, title="first_report", description="试一试: first_report")
 runner.run(suite)
 fp.close()
