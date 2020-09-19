@@ -1,5 +1,5 @@
 import unittest
-from page_test.test_search_page import TestSearchPage
+from test_case.test_search_page import TestSearchPage
 
 # 测试套件
 suite = unittest.TestSuite()
@@ -14,7 +14,7 @@ suite = unittest.TestSuite()
 # suite.addTests(cases)
 
 # 方法三, 批量导入测试用例
-test_dir = './'
+test_dir = '../'
 discover = unittest.defaultTestLoader.discover(start_dir=test_dir, pattern='test*.py')
 
 # 运行器
